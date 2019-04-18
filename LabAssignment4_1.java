@@ -1,22 +1,22 @@
-import java.util.Scanner; //Scanner ±â´É ºÒ·¯¿À±â
+import java.util.Scanner; //Scanner ê¸°ëŠ¥ ë¶ˆëŸ¬ì˜¤ê¸°
 
-/* Circle Å¬·¡½º */
-class Circle { //Circle Å¬·¡½º ¼±¾ğ
-	final double PI = 3.14159;  //PI »ó¼ö ¼±¾ğ
-	private double radius; //¹İÁö¸§ º¯¼ö¸¦ Àü¿ªº¯¼ö·Î ¼±¾ğ
+/* Circle í´ë˜ìŠ¤ */
+class Circle { //Circle í´ë˜ìŠ¤ ì„ ì–¸
+	final double PI = 3.14159;  //PI ìƒìˆ˜ ì„ ì–¸
+	private double radius; //ë°˜ì§€ë¦„ ë³€ìˆ˜ë¥¼ ì „ì—­ë³€ìˆ˜ë¡œ ì„ ì–¸
 	
-	public void setRadius(double radius) { //setRadius¶ó´Â ¸Ş¼Òµå ¼±¾ğ(¹İÁö¸§ °ª ´ëÀÔ)
-		this.radius = radius; //°ıÈ£ ¾ÈÀÇ °ªÀ» Àü¿ªº¯¼ö ¹İÁö¸§¿¡ ¼±¾ğ
+	public void setRadius(double radius) { //setRadiusë¼ëŠ” ë©”ì†Œë“œ ì„ ì–¸(ë°˜ì§€ë¦„ ê°’ ëŒ€ì…)
+		this.radius = radius; //ê´„í˜¸ ì•ˆì˜ ê°’ì„ ì „ì—­ë³€ìˆ˜ ë°˜ì§€ë¦„ì— ì„ ì–¸
 	}
-	public double getRadius() {return radius;} //getRadius¶ó´Â ¸Ş¼Òµå ¼±¾ğ {¹İÁö¸§°ª ¸®ÅÏ}
+	public double getRadius() {return radius;} //getRadiusë¼ëŠ” ë©”ì†Œë“œ ì„ ì–¸ {ë°˜ì§€ë¦„ê°’ ë¦¬í„´}
 	
-	public double area() { //area¶ó´Â ¸Ş¼Òµå ¼±¾ğ
-		double large = PI * radius * radius; //³ĞÀÌ°ª °è»ê
-		return large; //°è»êÇÑ ³ĞÀÌ°ªÀ» ¸®ÅÏ
+	public double area() { //areaë¼ëŠ” ë©”ì†Œë“œ ì„ ì–¸
+		double large = PI * radius * radius; //ë„“ì´ê°’ ê³„ì‚°
+		return large; //ê³„ì‚°í•œ ë„“ì´ê°’ì„ ë¦¬í„´
 	}
 	
-	public void showCircle() { //showCircle ¸Ş¼Òµå ¼±¾ğ
-		System.out.print(area()); //Ãâ·Â
+	public void showCircle() { //showCircle ë©”ì†Œë“œ ì„ ì–¸
+		System.out.print(area()); //ì¶œë ¥
 	}
 }
 
@@ -25,29 +25,29 @@ public class LabAssignment4_1 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		/* ½ºÄ³³Ê ±â´É ºÒ·¯¿À±â */
-		Scanner key = new Scanner(System.in); //½ºÄ³³Ê ±â´É ºÒ·¯¿À±â
+		/* ìŠ¤ìºë„ˆ ê¸°ëŠ¥ ë¶ˆëŸ¬ì˜¤ê¸° */
+		Scanner key = new Scanner(System.in); //ìŠ¤ìºë„ˆ ê¸°ëŠ¥ ë¶ˆëŸ¬ì˜¤ê¸°
 		
-		/* Circle Å¬·¡½º ºÒ·¯¿À±â */
-		Circle aCircle = new Circle(); //Circle Å¬·¡½º¸¦ aCircle·Î ºÒ·¯¿ÈÀ» ¼±¾ğ
+		/* Circle í´ë˜ìŠ¤ ë¶ˆëŸ¬ì˜¤ê¸° */
+		Circle aCircle = new Circle(); //Circle í´ë˜ìŠ¤ë¥¼ aCircleë¡œ ë¶ˆëŸ¬ì˜´ì„ ì„ ì–¸
 		
-		/* ÃÊ±âÈ­¸é */
-		System.out.println("ÇĞ¹ø: 201804037"); //Ãâ·Â
-		System.out.println("ÀÌ¸§: È²Àç¹Î"); //Ãâ·Â
-		System.out.println("============\n"); //Ãâ·Â
+		/* ì´ˆê¸°í™”ë©´ */
+		System.out.println("í•™ë²ˆ: *********");  //ì¶œë ¥ê°’
+		System.out.println("ì´ë¦„: ***"); //ì¶œë ¥ê°’
+		System.out.println("============\n"); //ì¶œë ¥
 		
-		System.out.println("¹İÁö¸§À» ÀÔ·ÂÇØÁÖ¼¼¿ä."); //Ãâ·Â
-		double num_radius = key.nextDouble(); //»ç¿ëÀÚ¿¡°Ô ¹İÁö¸§ °ªÀ» ÀÔ·Â¹ŞÀ½
+		System.out.println("ë°˜ì§€ë¦„ì„ ì…ë ¥í•´ì£¼ì„¸ìš”."); //ì¶œë ¥
+		double num_radius = key.nextDouble(); //ì‚¬ìš©ìì—ê²Œ ë°˜ì§€ë¦„ ê°’ì„ ì…ë ¥ë°›ìŒ
 		
-		/* °á°ú¹° Ãâ·Â */
-		aCircle.setRadius(num_radius); //¹İÁö¸§ °ªÀ» Circle Å¬·¡½º ¾È¿¡ ¼±¾ğ
+		/* ê²°ê³¼ë¬¼ ì¶œë ¥ */
+		aCircle.setRadius(num_radius); //ë°˜ì§€ë¦„ ê°’ì„ Circle í´ë˜ìŠ¤ ì•ˆì— ì„ ì–¸
 		
-		System.out.println("¹İÁö¸§: " + aCircle.getRadius()); //¹İÁö¸§ °ª Ãâ·Â
-		System.out.print("³ĞÀÌ: "); //Ãâ·Â
-		aCircle.showCircle(); //³ĞÀÌ °ª Ãâ·Â
+		System.out.println("ë°˜ì§€ë¦„: " + aCircle.getRadius()); //ë°˜ì§€ë¦„ ê°’ ì¶œë ¥
+		System.out.print("ë„“ì´: "); //ì¶œë ¥
+		aCircle.showCircle(); //ë„“ì´ ê°’ ì¶œë ¥
 		
-		/* ½ºÄ³³Ê ±â´É Á¾·á */
-		key.close(); //½ºÄ³³Ê ±â´É Á¾·á
+		/* ìŠ¤ìºë„ˆ ê¸°ëŠ¥ ì¢…ë£Œ */
+		key.close(); //ìŠ¤ìºë„ˆ ê¸°ëŠ¥ ì¢…ë£Œ
 	}
 
 }
