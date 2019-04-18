@@ -1,70 +1,70 @@
-import java.util.*; //util ¸ğµç ±â´É ºÒ·¯¿À±â
+import java.util.*; //util ëª¨ë“  ê¸°ëŠ¥ ë¶ˆëŸ¬ì˜¤ê¸°
 public class LabAssignment2_2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		/* º¯¼ö ¼±¾ğ ºÎºĞ */
-		int num_user = 0, num_com = 0; //int(Á¤¼ö) º¯¼ö ¼±¾ğ
+		/* ë³€ìˆ˜ ì„ ì–¸ ë¶€ë¶„ */
+		int num_user = 0, num_com = 0; //int(ì •ìˆ˜) ë³€ìˆ˜ ì„ ì–¸
 		
-		/* Ãâ·Â */
-		System.out.println("ÇĞ¹ø: 201804037");  //Ãâ·Â°ª
-		System.out.println("ÀÌ¸§: È²Àç¹Î"); //Ãâ·Â°ª
-		System.out.println("============\n"); //Ãâ·Â°ª
+		/* ì¶œë ¥ */
+		System.out.println("í•™ë²ˆ: *********");  //ì¶œë ¥ê°’
+		System.out.println("ì´ë¦„: ***"); //ì¶œë ¥ê°’
+		System.out.println("============\n"); //ì¶œë ¥ê°’
 		
-		/* ½ºÄ³³Ê ±â´É È°¼ºÈ­ */
-		Scanner key = new Scanner(System.in); //½ºÄ³³Ê ±â´É È°¼ºÈ­
+		/* ìŠ¤ìºë„ˆ ê¸°ëŠ¥ í™œì„±í™” */
+		Scanner key = new Scanner(System.in); //ìŠ¤ìºë„ˆ ê¸°ëŠ¥ í™œì„±í™”
 
-		/* ¹İº¹¹® */
+		/* ë°˜ë³µë¬¸ */
 		do {
-			System.out.println("°¡À§(1)\t¹ÙÀ§(2)\tº¸(3)\t Áß ÇÏ³ª¸¦ ÀÔ·ÂÇÏ¼¼¿ä!"); //Ãâ·Â
-			num_user = key.nextInt(); //»ç¿ëÀÚ¿¡°Ô Á¤¼ö°ª ÀÔ·Â¹Ş¾Æ ¼±¾ğÇÏ±â
-			num_com = (int)(Math.random()*3) + 1; //·£´ı ÇÔ¼ö·Î Á¤¼ö°ª ¼³Á¤ÇÏ¿© ¼±¾ğÇÏ±â
+			System.out.println("ê°€ìœ„(1)\të°”ìœ„(2)\të³´(3)\t ì¤‘ í•˜ë‚˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”!"); //ì¶œë ¥
+			num_user = key.nextInt(); //ì‚¬ìš©ìì—ê²Œ ì •ìˆ˜ê°’ ì…ë ¥ë°›ì•„ ì„ ì–¸í•˜ê¸°
+			num_com = (int)(Math.random()*3) + 1; //ëœë¤ í•¨ìˆ˜ë¡œ ì •ìˆ˜ê°’ ì„¤ì •í•˜ì—¬ ì„ ì–¸í•˜ê¸°
 			
-			if (num_user == 1) { //»ç¿ëÀÚ°¡ 1À» ÀÔ·ÂÇßÀ» ¶§
-				System.out.println("´ç½ÅÀº " + num_user + "À»(¸¦) ³Â½À´Ï´Ù."); //Ãâ·Â
-				System.out.println("ÄÄÇ»ÅÍ´Â " + num_com + "À»(¸¦) ³Â½À´Ï´Ù."); //Ãâ·Â
+			if (num_user == 1) { //ì‚¬ìš©ìê°€ 1ì„ ì…ë ¥í–ˆì„ ë•Œ
+				System.out.println("ë‹¹ì‹ ì€ " + num_user + "ì„(ë¥¼) ëƒˆìŠµë‹ˆë‹¤."); //ì¶œë ¥
+				System.out.println("ì»´í“¨í„°ëŠ” " + num_com + "ì„(ë¥¼) ëƒˆìŠµë‹ˆë‹¤."); //ì¶œë ¥
 				
-				if (num_com == 1) //ÄÄÇ»ÅÍ¿¡ ÀúÀåµÈ °ªÀÌ 1ÀÏ ¶§
-					System.out.println("ºñ°å½À´Ï´Ù."); //Ãâ·Â
-				else if (num_com == 2) //ÄÄÇ»ÅÍ¿¡ ÀúÀåµÈ °ªÀÌ 2ÀÏ ¶§
-					System.out.println("Á³½À´Ï´Ù."); //Ãâ·Â
-				else //ÄÄÇ»ÅÍ¿¡ ÀúÀåµÈ °ªÀÌ 3ÀÏ ¶§
-					System.out.println("ÀÌ°å½À´Ï´Ù."); //Ãâ·Â
+				if (num_com == 1) //ì»´í“¨í„°ì— ì €ì¥ëœ ê°’ì´ 1ì¼ ë•Œ
+					System.out.println("ë¹„ê²¼ìŠµë‹ˆë‹¤."); //ì¶œë ¥
+				else if (num_com == 2) //ì»´í“¨í„°ì— ì €ì¥ëœ ê°’ì´ 2ì¼ ë•Œ
+					System.out.println("ì¡ŒìŠµë‹ˆë‹¤."); //ì¶œë ¥
+				else //ì»´í“¨í„°ì— ì €ì¥ëœ ê°’ì´ 3ì¼ ë•Œ
+					System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤."); //ì¶œë ¥
 				}
 			
-			else if (num_user == 2) { //»ç¿ëÀÚ°¡ 2¸¦ ÀÔ·ÂÇßÀ» ¶§
-				System.out.println("´ç½ÅÀº " + num_user + "À»(¸¦) ³Â½À´Ï´Ù."); //Ãâ·Â
-				System.out.println("ÄÄÇ»ÅÍ´Â " + num_com + "À»(¸¦) ³Â½À´Ï´Ù."); //Ãâ·Â
+			else if (num_user == 2) { //ì‚¬ìš©ìê°€ 2ë¥¼ ì…ë ¥í–ˆì„ ë•Œ
+				System.out.println("ë‹¹ì‹ ì€ " + num_user + "ì„(ë¥¼) ëƒˆìŠµë‹ˆë‹¤."); //ì¶œë ¥
+				System.out.println("ì»´í“¨í„°ëŠ” " + num_com + "ì„(ë¥¼) ëƒˆìŠµë‹ˆë‹¤."); //ì¶œë ¥
 				
-				if (num_com == 1) //ÄÄÇ»ÅÍ¿¡ ÀúÀåµÈ °ªÀÌ 1ÀÏ ¶§
-					System.out.println("ÀÌ°å½À´Ï´Ù."); //Ãâ·Â
-				else if (num_com == 2) //ÄÄÇ»ÅÍ¿¡ ÀúÀåµÈ °ªÀÌ 2ÀÏ ¶§
-					System.out.println("ºñ°å½À´Ï´Ù."); //Ãâ·Â
-				else //ÄÄÇ»ÅÍ¿¡ ÀúÀåµÈ °ªÀÌ 3ÀÏ ¶§
-					System.out.println("Á³½À´Ï´Ù."); //Ãâ·Â
+				if (num_com == 1) //ì»´í“¨í„°ì— ì €ì¥ëœ ê°’ì´ 1ì¼ ë•Œ
+					System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤."); //ì¶œë ¥
+				else if (num_com == 2) //ì»´í“¨í„°ì— ì €ì¥ëœ ê°’ì´ 2ì¼ ë•Œ
+					System.out.println("ë¹„ê²¼ìŠµë‹ˆë‹¤."); //ì¶œë ¥
+				else //ì»´í“¨í„°ì— ì €ì¥ëœ ê°’ì´ 3ì¼ ë•Œ
+					System.out.println("ì¡ŒìŠµë‹ˆë‹¤."); //ì¶œë ¥
 				}
 			
-			else if (num_user == 3) { //»ç¿ëÀÚ°¡ 3À» ÀÔ·ÂÇßÀ» ¶§
-				System.out.println("´ç½ÅÀº " + num_user + "À»(¸¦) ³Â½À´Ï´Ù."); //Ãâ·Â
-				System.out.println("ÄÄÇ»ÅÍ´Â " + num_com + "À»(¸¦) ³Â½À´Ï´Ù."); //Ãâ·Â
+			else if (num_user == 3) { //ì‚¬ìš©ìê°€ 3ì„ ì…ë ¥í–ˆì„ ë•Œ
+				System.out.println("ë‹¹ì‹ ì€ " + num_user + "ì„(ë¥¼) ëƒˆìŠµë‹ˆë‹¤."); //ì¶œë ¥
+				System.out.println("ì»´í“¨í„°ëŠ” " + num_com + "ì„(ë¥¼) ëƒˆìŠµë‹ˆë‹¤."); //ì¶œë ¥
 				
-				if (num_com == 1) //ÄÄÇ»ÅÍ¿¡ ÀúÀåµÈ °ªÀÌ 1ÀÏ ¶§
-					System.out.println("Á³½À´Ï´Ù."); //Ãâ·Â
-				else if (num_com == 2) //ÄÄÇ»ÅÍ¿¡ ÀúÀåµÈ °ªÀÌ 2ÀÏ ¶§
-					System.out.println("ÀÌ°å½À´Ï´Ù."); //Ãâ·Â
-				else //ÄÄÇ»ÅÍ¿¡ ÀúÀåµÈ °ªÀÌ 3ÀÏ ¶§
-					System.out.println("ºñ°å½À´Ï´Ù."); //Ãâ·Â
+				if (num_com == 1) //ì»´í“¨í„°ì— ì €ì¥ëœ ê°’ì´ 1ì¼ ë•Œ
+					System.out.println("ì¡ŒìŠµë‹ˆë‹¤."); //ì¶œë ¥
+				else if (num_com == 2) //ì»´í“¨í„°ì— ì €ì¥ëœ ê°’ì´ 2ì¼ ë•Œ
+					System.out.println("ì´ê²¼ìŠµë‹ˆë‹¤."); //ì¶œë ¥
+				else //ì»´í“¨í„°ì— ì €ì¥ëœ ê°’ì´ 3ì¼ ë•Œ
+					System.out.println("ë¹„ê²¼ìŠµë‹ˆë‹¤."); //ì¶œë ¥
 				}
 
-			else if (num_user != 0) //»ç¿ëÀÚ°¡ 1, 2, 3ÀÌ ¾Æ´Ñ ´Ù¸¥ °ªÀ» ÀÔ·ÂÇßÀ» ¶§
-				System.out.println("ÀÔ·Â ¹üÀ§°¡ ¾Æ´Õ´Ï´Ù."); //Ãâ·Â
+			else if (num_user != 0) //ì‚¬ìš©ìê°€ 1, 2, 3ì´ ì•„ë‹Œ ë‹¤ë¥¸ ê°’ì„ ì…ë ¥í–ˆì„ ë•Œ
+				System.out.println("ì…ë ¥ ë²”ìœ„ê°€ ì•„ë‹™ë‹ˆë‹¤."); //ì¶œë ¥
 			
-		} while(num_user != 0); //»ç¿ëÀÚ°¡ 0À» ÀÔ·ÂÇßÀ» ¶§¿¡ ¹İº¹¹® Á¾·á
-		System.out.println("Á¾·áµË´Ï´Ù."); //Ãâ·Â
+		} while(num_user != 0); //ì‚¬ìš©ìê°€ 0ì„ ì…ë ¥í–ˆì„ ë•Œì— ë°˜ë³µë¬¸ ì¢…ë£Œ
+		System.out.println("ì¢…ë£Œë©ë‹ˆë‹¤."); //ì¶œë ¥
 		
-		/* ½ºÄ³³Ê ±â´É Á¾·á */
-		key.close(); //½ºÄ³³Ê ±â´É Á¾·á
+		/* ìŠ¤ìºë„ˆ ê¸°ëŠ¥ ì¢…ë£Œ */
+		key.close(); //ìŠ¤ìºë„ˆ ê¸°ëŠ¥ ì¢…ë£Œ
 	}
 
 }
