@@ -7,8 +7,7 @@ public class LabAssignment1_1 {
 
 		/* 변수 선언  부분 */
 		String name, dept; //사용자에게 입력받을 이름 변수와 학과 변수를 'String'으로 선언
-		int numb, gender, kor, eng, mat;
-		//사용자에게 입력받을 나이 변수, 성별 변수, 국어점수 변수, 영어점수 변수, 수학점수 변수를 'int'로 선언
+		int numb, gender, kor, eng, mat; //사용자에게 입력받을 나이 변수, 성별 변수, 국어점수 변수, 영어점수 변수, 수학점수 변수를 'int'로 선언
 		double avg; //국어점수와 영어점수, 수학점수의 평균값을 대입할 변수를 'double'로 선언
 		
 		/* 스캐너 기능 선언 부분 */
