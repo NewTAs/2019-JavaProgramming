@@ -1,73 +1,73 @@
-import java.util.Scanner; //½ºÄ³³Ê ±â´É ºÒ·¯¿À±â
+import java.util.Scanner; //ìŠ¤ìºë„ˆ ê¸°ëŠ¥ ë¶ˆëŸ¬ì˜¤ê¸°
 public class LabAssignment3_2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		/* ½ºÄ³³Ê ±â´É ¼±¾ğÇÏ±â */
-		Scanner key = new Scanner(System.in); //½ºÄ³³Ê ±â´É ¼±¾ğÇÏ±â
+		/* ìŠ¤ìºë„ˆ ê¸°ëŠ¥ ì„ ì–¸í•˜ê¸° */
+		Scanner key = new Scanner(System.in); //ìŠ¤ìºë„ˆ ê¸°ëŠ¥ ì„ ì–¸í•˜ê¸°
 		
-		/* ÃÊ±â È­¸é */
-		System.out.println("ÇĞ¹ø: 201804037"); //Ãâ·Â
-		System.out.println("ÀÌ¸§: È²Àç¹Î"); //Ãâ·Â
-		System.out.println("============"); //Ãâ·Â
+		/* ì´ˆê¸° í™”ë©´ */
+		System.out.println("í•™ë²ˆ: *********");  //ì¶œë ¥ê°’
+		System.out.println("ì´ë¦„: ***"); //ì¶œë ¥ê°’
+		System.out.println("============"); //ì¶œë ¥
 		
-		System.out.println("Çà·ÄÀÇ Å©±â¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä."); //Ãâ·Â
-		int width = key.nextInt(), height = key.nextInt(); //»ç¿ëÀÚ¿¡°Ô Çà·ÄÀÇ Å©±â¸¦ ÀÔ·Â¹Ş¾Æ¼­ °¢°¢ ¼±¾ğÇÏ±â
+		System.out.println("í–‰ë ¬ì˜ í¬ê¸°ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”."); //ì¶œë ¥
+		int width = key.nextInt(), height = key.nextInt(); //ì‚¬ìš©ìì—ê²Œ í–‰ë ¬ì˜ í¬ê¸°ë¥¼ ì…ë ¥ë°›ì•„ì„œ ê°ê° ì„ ì–¸í•˜ê¸°
 		
-		int first_matrix[][] = new int[width][height]; //¹è¿­°ú ¹è¿­ÀÇ Å©±â ¼±¾ğÇÏ±â
-		int second_matrix[][] = new int[width][height]; //¹è¿­°ú ¹è¿­ÀÇ Å©±â ¼±¾ğÇÏ±â
-		int result_matrix[][] = new int[width][height]; //¹è¿­°ú ¹è¿­ÀÇ Å©±â ¼±¾ğÇÏ±â
+		int first_matrix[][] = new int[width][height]; //ë°°ì—´ê³¼ ë°°ì—´ì˜ í¬ê¸° ì„ ì–¸í•˜ê¸°
+		int second_matrix[][] = new int[width][height]; //ë°°ì—´ê³¼ ë°°ì—´ì˜ í¬ê¸° ì„ ì–¸í•˜ê¸°
+		int result_matrix[][] = new int[width][height]; //ë°°ì—´ê³¼ ë°°ì—´ì˜ í¬ê¸° ì„ ì–¸í•˜ê¸°
 		
-		/* Ã¹¹øÂ° ¹è¿­ ¼±¾ğÇÏ±â  */
-		System.out.println("Ã¹ ¹øÂ° matrix"); //Ãâ·Â
-		for (int i = 0 ; i < width ; i++) { //Çà¿¡ ´ëÇÑ ¹İº¹¹®
-			for (int j = 0 ; j < height ; j++) { //¿­¿¡ ´ëÇÑ ¹İº¹¹®
-				System.out.print("(" + i + ", " + j + ") :"); //Ãâ·Â
-				first_matrix[i][j] = key.nextInt(); //»ç¿ëÀÚ¿¡°Ô °ªÀ» ÀÔ·Â¹Ş¾Æ¼­ ¼±¾ğ
+		/* ì²«ë²ˆì§¸ ë°°ì—´ ì„ ì–¸í•˜ê¸°  */
+		System.out.println("ì²« ë²ˆì§¸ matrix"); //ì¶œë ¥
+		for (int i = 0 ; i < width ; i++) { //í–‰ì— ëŒ€í•œ ë°˜ë³µë¬¸
+			for (int j = 0 ; j < height ; j++) { //ì—´ì— ëŒ€í•œ ë°˜ë³µë¬¸
+				System.out.print("(" + i + ", " + j + ") :"); //ì¶œë ¥
+				first_matrix[i][j] = key.nextInt(); //ì‚¬ìš©ìì—ê²Œ ê°’ì„ ì…ë ¥ë°›ì•„ì„œ ì„ ì–¸
 			}
 		}
-		for (int i = 0 ; i < width ; i++) { //Çà¿¡ ´ëÇÑ ¹İº¹¹®
-			for (int j = 0 ; j < height ; j++) { //¿­¿¡ ´ëÇÑ ¹İº¹¹®
-				System.out.print(first_matrix[i][j]); //¹è¿­ Ãâ·Â
-				System.out.print('\t'); //Ãâ·Â
+		for (int i = 0 ; i < width ; i++) { //í–‰ì— ëŒ€í•œ ë°˜ë³µë¬¸
+			for (int j = 0 ; j < height ; j++) { //ì—´ì— ëŒ€í•œ ë°˜ë³µë¬¸
+				System.out.print(first_matrix[i][j]); //ë°°ì—´ ì¶œë ¥
+				System.out.print('\t'); //ì¶œë ¥
 			}
-			System.out.println(); //°ø¹é Ãâ·Â
+			System.out.println(); //ê³µë°± ì¶œë ¥
 		}
 		
-		/* µÎ¹øÂ° ¹è¿­ ¼±¾ğÇÏ±â */
-		System.out.println("µÎ ¹øÂ° matrix"); //Ãâ·Â
-		for (int i = 0 ; i < width ; i++) { //Çà¿¡ ´ëÇÑ ¹İº¹¹®
-			for (int j = 0 ; j < height ; j++) { //¿­¿¡ ´ëÇÑ ¹İº¹¹®
-				System.out.print("(" + i + ", " + j + ") :"); //Ãâ·Â
-				second_matrix[i][j] = key.nextInt(); //»ç¿ëÀÚ¿¡°Ô °ªÀ» ÀÔ·Â¹Ş¾Æ¼­ ¼±¾ğ
+		/* ë‘ë²ˆì§¸ ë°°ì—´ ì„ ì–¸í•˜ê¸° */
+		System.out.println("ë‘ ë²ˆì§¸ matrix"); //ì¶œë ¥
+		for (int i = 0 ; i < width ; i++) { //í–‰ì— ëŒ€í•œ ë°˜ë³µë¬¸
+			for (int j = 0 ; j < height ; j++) { //ì—´ì— ëŒ€í•œ ë°˜ë³µë¬¸
+				System.out.print("(" + i + ", " + j + ") :"); //ì¶œë ¥
+				second_matrix[i][j] = key.nextInt(); //ì‚¬ìš©ìì—ê²Œ ê°’ì„ ì…ë ¥ë°›ì•„ì„œ ì„ ì–¸
 			}
 		}
-		for (int i = 0 ; i < width ; i++) { //Çà¿¡ ´ëÇÑ ¹İº¹¹®
-			for (int j = 0 ; j < height ; j++) { //¿­¿¡ ´ëÇÑ ¹İº¹¹®
-				System.out.print(second_matrix[i][j]); //¹è¿­ Ãâ·Â
-				System.out.print('\t'); //Ãâ·Â
+		for (int i = 0 ; i < width ; i++) { //í–‰ì— ëŒ€í•œ ë°˜ë³µë¬¸
+			for (int j = 0 ; j < height ; j++) { //ì—´ì— ëŒ€í•œ ë°˜ë³µë¬¸
+				System.out.print(second_matrix[i][j]); //ë°°ì—´ ì¶œë ¥
+				System.out.print('\t'); //ì¶œë ¥
 			}
-			System.out.println(); //°ø¹é Ãâ·Â
+			System.out.println(); //ê³µë°± ì¶œë ¥
 		}
 		
-		/* ¹è¿­ ÇÕÇÏ±â */
-		for (int i = 0 ; i < width ; i++) { //Çà¿¡ ´ëÇÑ ¹İº¹¹®
-			for (int j = 0 ; j < height ; j++) //¿­¿¡ ´ëÇÑ ¹İº¹¹®
-				result_matrix[i][j] = first_matrix[i][j] + second_matrix[i][j]; //Ã¹¹øÂ° Çà·Ä°ú µÎ¹øÂ° Çà·ÄÀ» ÇÕÇÏ¿© ¼±¾ğ
+		/* ë°°ì—´ í•©í•˜ê¸° */
+		for (int i = 0 ; i < width ; i++) { //í–‰ì— ëŒ€í•œ ë°˜ë³µë¬¸
+			for (int j = 0 ; j < height ; j++) //ì—´ì— ëŒ€í•œ ë°˜ë³µë¬¸
+				result_matrix[i][j] = first_matrix[i][j] + second_matrix[i][j]; //ì²«ë²ˆì§¸ í–‰ë ¬ê³¼ ë‘ë²ˆì§¸ í–‰ë ¬ì„ í•©í•˜ì—¬ ì„ ì–¸
 		}
 		
-		/* °á°ú¹® Ãâ·Â */
-		System.out.println("\n°á°ú"); //Ãâ·Â
-		for (int i = 0 ; i < width ; i++) { //Çà¿¡ ´ëÇÑ ¹İº¹¹®
-			for (int j = 0 ; j < height ; j++) { //¿­¿¡ ´ëÇÑ ¹İº¹¹®
-				System.out.print(result_matrix[i][j]); //¹è¿­ Ãâ·Â
-				System.out.print('\t'); //Ãâ·Â
+		/* ê²°ê³¼ë¬¸ ì¶œë ¥ */
+		System.out.println("\nê²°ê³¼"); //ì¶œë ¥
+		for (int i = 0 ; i < width ; i++) { //í–‰ì— ëŒ€í•œ ë°˜ë³µë¬¸
+			for (int j = 0 ; j < height ; j++) { //ì—´ì— ëŒ€í•œ ë°˜ë³µë¬¸
+				System.out.print(result_matrix[i][j]); //ë°°ì—´ ì¶œë ¥
+				System.out.print('\t'); //ì¶œë ¥
 			}
-			System.out.println(); //°ø¹é Ãâ·Â
+			System.out.println(); //ê³µë°± ì¶œë ¥
 		}
-		/* ½ºÄ³³Ê ±â´É Á¾·á */
-		key.close(); //½ºÄ³³Ê ±â´É Á¾·á
+		/* ìŠ¤ìºë„ˆ ê¸°ëŠ¥ ì¢…ë£Œ */
+		key.close(); //ìŠ¤ìºë„ˆ ê¸°ëŠ¥ ì¢…ë£Œ
 	}
 
 }
