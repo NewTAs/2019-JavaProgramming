@@ -1,71 +1,71 @@
-import java.util.Scanner; //Scanner ±â´É ºÒ·¯¿À±â
+import java.util.Scanner; //Scanner ê¸°ëŠ¥ ë¶ˆëŸ¬ì˜¤ê¸°
 public class LabAssignment2_1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		/* º¯¼ö ¼±¾ğ ºÎºĞ */
-		int num_fir = 0, num_sec = 0, results = 0; //int(Á¤¼ö) º¯¼ö ¼±¾ğ
-		double result_s = 0;  //double(½Ç¼ö) º¯¼ö ¼±¾ğ
+		/* ë³€ìˆ˜ ì„ ì–¸ ë¶€ë¶„ */
+		int num_fir = 0, num_sec = 0, results = 0; //int(ì •ìˆ˜) ë³€ìˆ˜ ì„ ì–¸
+		double result_s = 0;  //double(ì‹¤ìˆ˜) ë³€ìˆ˜ ì„ ì–¸
 
-		/* ½ºÄ³³Ê ±â´É ¼±¾ğ ºÎºĞ */
+		/* ìŠ¤ìºë„ˆ ê¸°ëŠ¥ ì„ ì–¸ ë¶€ë¶„ */
 		Scanner key = new Scanner(System.in);
 		
-		/* Ãâ·Â */
-		System.out.println("ÇĞ¹ø: 201804037");  //Ãâ·Â°ª
-		System.out.println("ÀÌ¸§: È²Àç¹Î"); //Ãâ·Â°ª
-		System.out.println("============\n"); //Ãâ·Â°ª
+		/* ì¶œë ¥ */
+		System.out.println("í•™ë²ˆ: *********");  //ì¶œë ¥ê°’
+		System.out.println("ì´ë¦„: ***"); //ì¶œë ¥ê°’
+		System.out.println("============\n"); //ì¶œë ¥ê°’
 		
-		System.out.println("°è»ê±â ÇÁ·Î±×·¥ÀÔ´Ï´Ù."); //Ãâ·Â°ª
-		System.out.println("´ÙÀ½ ¼ıÀÚ Áß ¼±ÅÃ ÇÏ¼¼¿ä."); //Ãâ·Â°ª
-		System.out.println("1.´õÇÏ±â\t2.»©±â\t3.°öÇÏ±â\t4.³ª´©±â"); //Ãâ·Â°ª
-		int num_switch = key.nextInt(); //»ç¿ëÀÚ¿¡°Ô Á¤¼ö°ª ÀÔ·Â¹Ş¾Æ ¼±¾ğÇÏ±â
+		System.out.println("ê³„ì‚°ê¸° í”„ë¡œê·¸ë¨ì…ë‹ˆë‹¤."); //ì¶œë ¥ê°’
+		System.out.println("ë‹¤ìŒ ìˆ«ì ì¤‘ ì„ íƒ í•˜ì„¸ìš”."); //ì¶œë ¥ê°’
+		System.out.println("1.ë”í•˜ê¸°\t2.ë¹¼ê¸°\t3.ê³±í•˜ê¸°\t4.ë‚˜ëˆ„ê¸°"); //ì¶œë ¥ê°’
+		int num_switch = key.nextInt(); //ì‚¬ìš©ìì—ê²Œ ì •ìˆ˜ê°’ ì…ë ¥ë°›ì•„ ì„ ì–¸í•˜ê¸°
 
-		/* °è»ê±â ÇÁ·Î±×·¥ */
-		switch(num_switch) {  //»ç¿ëÀÚ¿¡°Ô ÀÔ·Â¹ŞÀº °ªÀ¸·Î switch¹® ½ÇÇà
-		case(1) : //»ç¿ëÀÚ°¡ 1À» ÀÔ·ÂÇßÀ» ¶§
-			System.out.print("Ã¹ ¹øÂ° ¼ıÀÚ :"); //Ãâ·Â°ª
-			num_fir = key.nextInt(); //»ç¿ëÀÚ¿¡°Ô Á¤¼ö°ª ÀÔ·Â¹Ş¾Æ ¼±¾ğÇÏ±â
-			System.out.print("µÎ ¹øÂ° ¼ıÀÚ :"); //Ãâ·Â°ª
-			num_sec = key.nextInt(); //»ç¿ëÀÚ¿¡°Ô Á¤¼ö°ª ÀÔ·Â¹Ş¾Æ ¼±¾ğÇÏ±â
-			results = num_fir + num_sec; //»ç¿ëÀÚ¿¡°Ô ¹ŞÀº Á¤¼ö µÎ°³¸¦ ´õÇÏ¿© ¼±¾ğÇÏ±â
-			System.out.println("°á°ú: " + results); //Ãâ·Â°ª
-			break; //switch¹® ºüÁ® ³ª¿À±â
+		/* ê³„ì‚°ê¸° í”„ë¡œê·¸ë¨ */
+		switch(num_switch) {  //ì‚¬ìš©ìì—ê²Œ ì…ë ¥ë°›ì€ ê°’ìœ¼ë¡œ switchë¬¸ ì‹¤í–‰
+		case(1) : //ì‚¬ìš©ìê°€ 1ì„ ì…ë ¥í–ˆì„ ë•Œ
+			System.out.print("ì²« ë²ˆì§¸ ìˆ«ì :"); //ì¶œë ¥ê°’
+			num_fir = key.nextInt(); //ì‚¬ìš©ìì—ê²Œ ì •ìˆ˜ê°’ ì…ë ¥ë°›ì•„ ì„ ì–¸í•˜ê¸°
+			System.out.print("ë‘ ë²ˆì§¸ ìˆ«ì :"); //ì¶œë ¥ê°’
+			num_sec = key.nextInt(); //ì‚¬ìš©ìì—ê²Œ ì •ìˆ˜ê°’ ì…ë ¥ë°›ì•„ ì„ ì–¸í•˜ê¸°
+			results = num_fir + num_sec; //ì‚¬ìš©ìì—ê²Œ ë°›ì€ ì •ìˆ˜ ë‘ê°œë¥¼ ë”í•˜ì—¬ ì„ ì–¸í•˜ê¸°
+			System.out.println("ê²°ê³¼: " + results); //ì¶œë ¥ê°’
+			break; //switchë¬¸ ë¹ ì ¸ ë‚˜ì˜¤ê¸°
 			
-		case(2) : //»ç¿ëÀÚ°¡ 2À» ÀÔ·ÂÇßÀ» ¶§
-			System.out.print("Ã¹ ¹øÂ° ¼ıÀÚ :"); //Ãâ·Â°ª
-			num_fir = key.nextInt(); //»ç¿ëÀÚ¿¡°Ô Á¤¼ö°ª ÀÔ·Â¹Ş¾Æ ¼±¾ğÇÏ±â
-			System.out.print("µÎ ¹øÂ° ¼ıÀÚ :"); //Ãâ·Â°ª
-			num_sec = key.nextInt(); //»ç¿ëÀÚ¿¡°Ô Á¤¼ö°ª ÀÔ·Â¹Ş¾Æ ¼±¾ğÇÏ±â
-			results = num_fir - num_sec; //»ç¿ëÀÚ¿¡°Ô ¹ŞÀº Á¤¼ö µÎ°³¸¦ »©¼­ ¼±¾ğÇÏ±â
-			System.out.println("°á°ú: " + results); //Ãâ·Â°ª
-			break; //switch¹® ºüÁ® ³ª¿À±â
+		case(2) : //ì‚¬ìš©ìê°€ 2ì„ ì…ë ¥í–ˆì„ ë•Œ
+			System.out.print("ì²« ë²ˆì§¸ ìˆ«ì :"); //ì¶œë ¥ê°’
+			num_fir = key.nextInt(); //ì‚¬ìš©ìì—ê²Œ ì •ìˆ˜ê°’ ì…ë ¥ë°›ì•„ ì„ ì–¸í•˜ê¸°
+			System.out.print("ë‘ ë²ˆì§¸ ìˆ«ì :"); //ì¶œë ¥ê°’
+			num_sec = key.nextInt(); //ì‚¬ìš©ìì—ê²Œ ì •ìˆ˜ê°’ ì…ë ¥ë°›ì•„ ì„ ì–¸í•˜ê¸°
+			results = num_fir - num_sec; //ì‚¬ìš©ìì—ê²Œ ë°›ì€ ì •ìˆ˜ ë‘ê°œë¥¼ ë¹¼ì„œ ì„ ì–¸í•˜ê¸°
+			System.out.println("ê²°ê³¼: " + results); //ì¶œë ¥ê°’
+			break; //switchë¬¸ ë¹ ì ¸ ë‚˜ì˜¤ê¸°
 			
-		case(3) : //»ç¿ëÀÚ°¡ 3À» ÀÔ·ÂÇßÀ» ¶§
-			System.out.print("Ã¹ ¹øÂ° ¼ıÀÚ :"); //Ãâ·Â°ª
-			num_fir = key.nextInt(); //»ç¿ëÀÚ¿¡°Ô Á¤¼ö°ª ÀÔ·Â¹Ş¾Æ ¼±¾ğÇÏ±â
-			System.out.print("µÎ ¹øÂ° ¼ıÀÚ :"); //Ãâ·Â°ª
-			num_sec = key.nextInt(); //»ç¿ëÀÚ¿¡°Ô Á¤¼ö°ª ÀÔ·Â¹Ş¾Æ ¼±¾ğÇÏ±â
-			results = num_fir * num_sec; //»ç¿ëÀÚ¿¡°Ô ¹ŞÀº Á¤¼ö µÎ°³¸¦ °öÇÏ¿© ¼±¾ğÇÏ±â
-			System.out.println("°á°ú: " + results); //Ãâ·Â°ª
-			break; //switch¹® ºüÁ® ³ª¿À±â
+		case(3) : //ì‚¬ìš©ìê°€ 3ì„ ì…ë ¥í–ˆì„ ë•Œ
+			System.out.print("ì²« ë²ˆì§¸ ìˆ«ì :"); //ì¶œë ¥ê°’
+			num_fir = key.nextInt(); //ì‚¬ìš©ìì—ê²Œ ì •ìˆ˜ê°’ ì…ë ¥ë°›ì•„ ì„ ì–¸í•˜ê¸°
+			System.out.print("ë‘ ë²ˆì§¸ ìˆ«ì :"); //ì¶œë ¥ê°’
+			num_sec = key.nextInt(); //ì‚¬ìš©ìì—ê²Œ ì •ìˆ˜ê°’ ì…ë ¥ë°›ì•„ ì„ ì–¸í•˜ê¸°
+			results = num_fir * num_sec; //ì‚¬ìš©ìì—ê²Œ ë°›ì€ ì •ìˆ˜ ë‘ê°œë¥¼ ê³±í•˜ì—¬ ì„ ì–¸í•˜ê¸°
+			System.out.println("ê²°ê³¼: " + results); //ì¶œë ¥ê°’
+			break; //switchë¬¸ ë¹ ì ¸ ë‚˜ì˜¤ê¸°
 			
-		case(4) : //»ç¿ëÀÚ°¡ 4À» ÀÔ·ÂÇßÀ» ¶§
-			System.out.print("Ã¹ ¹øÂ° ¼ıÀÚ :"); //Ãâ·Â°ª
-			num_fir = key.nextInt(); //»ç¿ëÀÚ¿¡°Ô Á¤¼ö°ª ÀÔ·Â¹Ş¾Æ ¼±¾ğÇÏ±â
-			System.out.print("µÎ ¹øÂ° ¼ıÀÚ :"); //Ãâ·Â°ª
-			num_sec = key.nextInt(); //»ç¿ëÀÚ¿¡°Ô Á¤¼ö°ª ÀÔ·Â¹Ş¾Æ ¼±¾ğÇÏ±â
+		case(4) : //ì‚¬ìš©ìê°€ 4ì„ ì…ë ¥í–ˆì„ ë•Œ
+			System.out.print("ì²« ë²ˆì§¸ ìˆ«ì :"); //ì¶œë ¥ê°’
+			num_fir = key.nextInt(); //ì‚¬ìš©ìì—ê²Œ ì •ìˆ˜ê°’ ì…ë ¥ë°›ì•„ ì„ ì–¸í•˜ê¸°
+			System.out.print("ë‘ ë²ˆì§¸ ìˆ«ì :"); //ì¶œë ¥ê°’
+			num_sec = key.nextInt(); //ì‚¬ìš©ìì—ê²Œ ì •ìˆ˜ê°’ ì…ë ¥ë°›ì•„ ì„ ì–¸í•˜ê¸°
 			result_s = (double)num_fir / (double)num_sec;
-			//»ç¿ëÀÚ¿¡°Ô ¹ŞÀº Á¤¼ö µÎ°³¸¦ ³ª´©¾î ½Ç¼ö·Î ¼±¾ğÇÏ±â
-			System.out.println("°á°ú: " + result_s); //Ãâ·Â°ª
-			break; //switch¹® ºüÁ® ³ª¿À±â
+			//ì‚¬ìš©ìì—ê²Œ ë°›ì€ ì •ìˆ˜ ë‘ê°œë¥¼ ë‚˜ëˆ„ì–´ ì‹¤ìˆ˜ë¡œ ì„ ì–¸í•˜ê¸°
+			System.out.println("ê²°ê³¼: " + result_s); //ì¶œë ¥ê°’
+			break; //switchë¬¸ ë¹ ì ¸ ë‚˜ì˜¤ê¸°
 			
-		default : //»ç¿ëÀÚ°¡ 1, 2, 3, 4¸¦ ÀÔ·ÂÇÏÁö ¾Ê¾ÒÀ» ¶§
-			System.out.println("Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù."); //Ãâ·Â°ª
+		default : //ì‚¬ìš©ìê°€ 1, 2, 3, 4ë¥¼ ì…ë ¥í•˜ì§€ ì•Šì•˜ì„ ë•Œ
+			System.out.println("ì˜ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤."); //ì¶œë ¥ê°’
 		}
 		
-		/* ½ºÄ³³Ê ±â´É Á¾·á */
-		key.close(); //½ºÄ³³Ê ±â´É Á¾·á
+		/* ìŠ¤ìºë„ˆ ê¸°ëŠ¥ ì¢…ë£Œ */
+		key.close(); //ìŠ¤ìºë„ˆ ê¸°ëŠ¥ ì¢…ë£Œ
 	}
 
 }
