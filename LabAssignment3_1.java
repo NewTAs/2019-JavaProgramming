@@ -1,55 +1,55 @@
-import java.util.Scanner; //Scanner ±â´É ¼±¾ğÇÏ±â
+import java.util.Scanner; //Scanner ê¸°ëŠ¥ ì„ ì–¸í•˜ê¸°
 public class LabAssignment3_1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		/* ½ºÄ³³Ê ±â´É ¼±¾ğÇÏ±â */
-		Scanner key = new Scanner(System.in); //½ºÄ³³Ê ¼±¾ğ
+		/* ìŠ¤ìºë„ˆ ê¸°ëŠ¥ ì„ ì–¸í•˜ê¸° */
+		Scanner key = new Scanner(System.in); //ìŠ¤ìºë„ˆ ì„ ì–¸
 		
-		/* ÃÊ±â È­¸é */
-		System.out.println("ÇĞ¹ø: 201804037"); //Ãâ·Â
-		System.out.println("ÀÌ¸§: È²Àç¹Î"); //Ãâ·Â
-		System.out.println("============\n"); //Ãâ·Â
+		/* ì´ˆê¸° í™”ë©´ */
+		System.out.println("í•™ë²ˆ: *********");  //ì¶œë ¥ê°’
+		System.out.println("ì´ë¦„: ***"); //ì¶œë ¥ê°’
+		System.out.println("============\n"); //ì¶œë ¥
 		
-		System.out.println("ÇĞ»ı ¼ö¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä."); //Ãâ·Â
-		int student_number = key.nextInt(); //»ç¿ëÀÚ¿¡°Ô ÇĞ»ı¼ö¸¦ Á¤¼ö·Î ÀÔ·Â¹Ş¾Æ ¼±¾ğÇÏ±â
-		int intArray[] = new int[student_number]; //¹è¿­ ¼±¾ğÇÏ±â
+		System.out.println("í•™ìƒ ìˆ˜ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”."); //ì¶œë ¥
+		int student_number = key.nextInt(); //ì‚¬ìš©ìì—ê²Œ í•™ìƒìˆ˜ë¥¼ ì •ìˆ˜ë¡œ ì…ë ¥ë°›ì•„ ì„ ì–¸í•˜ê¸°
+		int intArray[] = new int[student_number]; //ë°°ì—´ ì„ ì–¸í•˜ê¸°
 		
-		if (student_number == 0) { //»ç¿ëÀÚ°¡ ÇĞ»ı ¼ö¸¦ 0¸íÀ¸·Î ÀÔ·ÂÇß´Ù¸é
-			System.out.println("ÇĞ»ı¼ö¸¦ Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù. ½Ã½ºÅÛÀÌ Á¾·áµË´Ï´Ù."); //Ãâ·Â
+		if (student_number == 0) { //ì‚¬ìš©ìê°€ í•™ìƒ ìˆ˜ë¥¼ 0ëª…ìœ¼ë¡œ ì…ë ¥í–ˆë‹¤ë©´
+			System.out.println("í•™ìƒìˆ˜ë¥¼ ì˜ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤. ì‹œìŠ¤í…œì´ ì¢…ë£Œë©ë‹ˆë‹¤."); //ì¶œë ¥
 		}
 		
-		else { //»ç¿ëÀÚ°¡ ÇĞ»ı ¼ö¸¦ 0¸íÀÌ ¾Æ´Ñ ´Ù¸¦ ¼ö¸¦ ÀÔ·ÂÇß´Ù¸é
-			System.out.println(student_number + "¸íÀÇ ÇÁ·Î±×·¡¹Ö Á¡¼ö¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä. (0~100)"); //Ãâ·Â
-			for (int i = 1 ; i <= student_number ; i++) { //ÀÔ·ÂÇÑ ÇĞ»ı ¼ö¿¡ ´ëÇØ Á¡¼ö¸¦ ÀÔ·Â¹Ş±â(¹İº¹¹®)
-				System.out.print(i + ": "); //Ãâ·Â
-				intArray[(i-1)] = key.nextInt();  //»ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ Á¤¼ö¸¦ ¹è¿­¿¡ ¼±¾ğÇÏ±â
+		else { //ì‚¬ìš©ìê°€ í•™ìƒ ìˆ˜ë¥¼ 0ëª…ì´ ì•„ë‹Œ ë‹¤ë¥¼ ìˆ˜ë¥¼ ì…ë ¥í–ˆë‹¤ë©´
+			System.out.println(student_number + "ëª…ì˜ í”„ë¡œê·¸ë˜ë° ì ìˆ˜ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”. (0~100)"); //ì¶œë ¥
+			for (int i = 1 ; i <= student_number ; i++) { //ì…ë ¥í•œ í•™ìƒ ìˆ˜ì— ëŒ€í•´ ì ìˆ˜ë¥¼ ì…ë ¥ë°›ê¸°(ë°˜ë³µë¬¸)
+				System.out.print(i + ": "); //ì¶œë ¥
+				intArray[(i-1)] = key.nextInt();  //ì‚¬ìš©ìê°€ ì…ë ¥í•œ ì •ìˆ˜ë¥¼ ë°°ì—´ì— ì„ ì–¸í•˜ê¸°
 				
-				if (intArray[(i-1)] < 0 || intArray[(i-1)] > 100) { //¸¸¾à »ç¿ëÀÚ°¡ Á¡¼ö¸¦ 0 ¹Ì¸¸, 100 ÃÊ°ú Çß´Ù¸é
-					System.out.println("Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù."); //Ãâ·Â
-					System.out.println(i + "¹øÂ° ÇĞ»ıÀÇ Á¡¼ö´Â 0Á¡À¸·Î Ã³¸® µË´Ï´Ù."); //Ãâ·Â
-					intArray[(i-1)] = 0; //¹è¿­ °ª¿¡ 0Á¡À» ¼±¾ğ
+				if (intArray[(i-1)] < 0 || intArray[(i-1)] > 100) { //ë§Œì•½ ì‚¬ìš©ìê°€ ì ìˆ˜ë¥¼ 0 ë¯¸ë§Œ, 100 ì´ˆê³¼ í–ˆë‹¤ë©´
+					System.out.println("ì˜ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤."); //ì¶œë ¥
+					System.out.println(i + "ë²ˆì§¸ í•™ìƒì˜ ì ìˆ˜ëŠ” 0ì ìœ¼ë¡œ ì²˜ë¦¬ ë©ë‹ˆë‹¤."); //ì¶œë ¥
+					intArray[(i-1)] = 0; //ë°°ì—´ ê°’ì— 0ì ì„ ì„ ì–¸
 				}
 			}
 			
-			/* °á°ú°ª Ç¥±â */
-			System.out.println("\n°á°ú"); //Ãâ·Â
+			/* ê²°ê³¼ê°’ í‘œê¸° */
+			System.out.println("\nê²°ê³¼"); //ì¶œë ¥
 			
-			for (int i = 0 ; i < student_number ; i++) { //ÇĞ»ı ¼ö¿¡ ´ëÇÑ ¹İº¹¹® ¼±¾ğ
-				System.out.print((i+1) + "¹ø " + intArray[i] + "Á¡" + " :"); //Ãâ·Â
-				int prints = intArray[i] / 10; //¹è¿­¿¡ ÀúÀåµÈ °ªÀ» 10À¸·Î ³ª´« °ªÀ» ¼±¾ğ
+			for (int i = 0 ; i < student_number ; i++) { //í•™ìƒ ìˆ˜ì— ëŒ€í•œ ë°˜ë³µë¬¸ ì„ ì–¸
+				System.out.print((i+1) + "ë²ˆ " + intArray[i] + "ì " + " :"); //ì¶œë ¥
+				int prints = intArray[i] / 10; //ë°°ì—´ì— ì €ì¥ëœ ê°’ì„ 10ìœ¼ë¡œ ë‚˜ëˆˆ ê°’ì„ ì„ ì–¸
 				
-				if (prints == 0 || prints == 1) { //¸¸¾à ¹è¿­¿¡ ÀúÀåµÈ °ªÀ» 10À¸·Î ³ª´« °ªÀÌ 0 ¶Ç´Â 1ÀÏ ¶§
-					System.out.println('*'); //¹®ÀÚ ÇÏ³ª¸¸ Ãâ·Â
-					continue; //¹İº¹¹® Ã³À½À¸·Î µ¹¾Æ°¨
+				if (prints == 0 || prints == 1) { //ë§Œì•½ ë°°ì—´ì— ì €ì¥ëœ ê°’ì„ 10ìœ¼ë¡œ ë‚˜ëˆˆ ê°’ì´ 0 ë˜ëŠ” 1ì¼ ë•Œ
+					System.out.println('*'); //ë¬¸ì í•˜ë‚˜ë§Œ ì¶œë ¥
+					continue; //ë°˜ë³µë¬¸ ì²˜ìŒìœ¼ë¡œ ëŒì•„ê°
 				}
-				for (int j = 0 ; j < prints ; j++) //º° Ãâ·Â¿¡ ´ëÇÑ ¹İº¹¹® ¼±¾ğ
-					System.out.print('*'); //Ãâ·Â
-				System.out.println(); //Ãâ·Â
+				for (int j = 0 ; j < prints ; j++) //ë³„ ì¶œë ¥ì— ëŒ€í•œ ë°˜ë³µë¬¸ ì„ ì–¸
+					System.out.print('*'); //ì¶œë ¥
+				System.out.println(); //ì¶œë ¥
 			}
 		}
-		/* ½ºÄ³³Ê ±â´É Á¾·á */
-		key.close(); //½ºÄ³³Ê ±â´É Á¾·á
+		/* ìŠ¤ìºë„ˆ ê¸°ëŠ¥ ì¢…ë£Œ */
+		key.close(); //ìŠ¤ìºë„ˆ ê¸°ëŠ¥ ì¢…ë£Œ
 	}
 }
