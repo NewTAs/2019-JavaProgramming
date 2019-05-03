@@ -39,7 +39,7 @@ class Test extends JFrame implements ActionListener {
  JTable table = null;
 
  public Test() {
-  super("¹®Á¦");
+  super("ë¬¸ì œ");
   this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
   this.setBounds(200, 200, 500, 500);
   this.setLayout(new FlowLayout());
@@ -56,16 +56,16 @@ class Test extends JFrame implements ActionListener {
 
   // panelTable
   String title[] = new String[3];
-  title[0] = "ÇĞ»ı ÀÌ¸§";
-  title[1] = "ÇĞ»ı ¼ºº°";
-  title[2] = "ÇĞ»ı ³ªÀÌ";
+  title[0] = "í•™ìƒ ì´ë¦„";
+  title[1] = "í•™ìƒ ì„±ë³„";
+  title[2] = "í•™ìƒ ë‚˜ì´";
   String data[][] = new String[0][0];
   // data[0][0] ="1";
-  // data[0][1] ="³²µ¿±æ";
+  // data[0][1] ="ë‚¨ë™ê¸¸";
   // data[0][2] ="27";
   //
   // data[1][0] ="2";
-  // data[1][1] ="ÀÌÈ¿¸²";
+  // data[1][1] ="ì´íš¨ë¦¼";
   // data[1][2] ="23";
 
   table = new JTable(data, title);
@@ -75,27 +75,27 @@ class Test extends JFrame implements ActionListener {
   panelTable.add(sp);
 
   // panelNormal
-  btn1 = new JButton("ÇĞ»ı µî·Ï");
+  btn1 = new JButton("í•™ìƒ ë“±ë¡");
   btn1.addActionListener(this);
   panelNormal.add(btn1);
 
-  btn2 = new JButton("ÇĞ»ı »èÁ¦");
+  btn2 = new JButton("í•™ìƒ ì‚­ì œ");
   btn2.addActionListener(this);
   panelNormal.add(btn2);
 
-  btn3 = new JButton("ÇĞ»ı Ãâ·Â");
+  btn3 = new JButton("í•™ìƒ ì¶œë ¥");
   btn3.addActionListener(this);
   panelNormal.add(btn3);
 
-  btn4 = new JButton("±³¼ö µî·Ï");
+  btn4 = new JButton("êµìˆ˜ ë“±ë¡");
   btn4.addActionListener(this);
   panelNormal.add(btn4);
 
-  btn5 = new JButton("±³¼ö  Ãâ·Â");
+  btn5 = new JButton("êµìˆ˜  ì¶œë ¥");
   btn5.addActionListener(this);
   panelNormal.add(btn5);
 
-  // ÆĞ³Î ¿¬°á
+  // íŒ¨ë„ ì—°ê²°
   this.add(panelComboBox);
   this.add(panelList);
   this.add(panelTable);
@@ -106,9 +106,9 @@ class Test extends JFrame implements ActionListener {
 
  public void refreshTable() {
   String titleTemp[] = new String[3];
-  titleTemp[0] = "ÇĞ»ı ÀÌ¸§";
-  titleTemp[1] = "ÇĞ»ı ¼ºº°";
-  titleTemp[2] = "ÇĞ»ı ³ªÀÌ";
+  titleTemp[0] = "í•™ìƒ ì´ë¦„";
+  titleTemp[1] = "í•™ìƒ ì„±ë³„";
+  titleTemp[2] = "í•™ìƒ ë‚˜ì´";
 
   int size = StuManager.list.size();
   String[][] dataStudentArray = new String[size][3];
@@ -141,9 +141,9 @@ class Test extends JFrame implements ActionListener {
   }
   if (e.getSource() == btn3) {
    String titleTemp[] = new String[3];
-   titleTemp[0] = "ÇĞ»ı ÀÌ¸§";
-   titleTemp[1] = "ÇĞ»ı ¼ºº°";
-   titleTemp[2] = "ÇĞ»ı ³ªÀÌ";
+   titleTemp[0] = "í•™ìƒ ì´ë¦„";
+   titleTemp[1] = "í•™ìƒ ì„±ë³„";
+   titleTemp[2] = "í•™ìƒ ë‚˜ì´";
 
    int size = StuManager.list.size();
    String[][] dataStudentArray = new String[size][3];
@@ -175,7 +175,7 @@ class ProPrint extends JFrame implements ActionListener {
  
  ArrayList<Stu> temp_list;
  public ProPrint() {
-  super("¹®Á¦");
+  super("ë¬¸ì œ");
   this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
   this.setBounds(200, 200, 500, 600);
   this.setLayout(new FlowLayout());
@@ -189,9 +189,9 @@ class ProPrint extends JFrame implements ActionListener {
   panelRelated.setLayout(new FlowLayout());
   
   String title[] = new String[3];
-  title[0] = "ÀÌ¸§";
-  title[1] = "¼ºº°";
-  title[2] = "³ªÀÌ";
+  title[0] = "ì´ë¦„";
+  title[1] = "ì„±ë³„";
+  title[2] = "ë‚˜ì´";
 
 
 
@@ -212,11 +212,11 @@ class ProPrint extends JFrame implements ActionListener {
   sp.setPreferredSize(new Dimension(300, 200));
   panelPrint.add(sp);
   
-  btn1 = new JButton("°ü·Ã ÇĞ»ı Á¤º¸ Ãâ·Â");
+  btn1 = new JButton("ê´€ë ¨ í•™ìƒ ì •ë³´ ì¶œë ¥");
   btn1.addActionListener(this);
   panelButton.add(btn1);
 
-  btn2 = new JButton("È®ÀÎ");
+  btn2 = new JButton("í™•ì¸");
   btn2.addActionListener(this);
   panelButton.add(btn2);
   
@@ -235,9 +235,9 @@ class ProPrint extends JFrame implements ActionListener {
 
  public void refreshTable(){
   String titleTemp[] = new String[3];
-  titleTemp[0] = "ÀÌ¸§";
-  titleTemp[1] = "¼ºº°";
-  titleTemp[2] = "³ªÀÌ";
+  titleTemp[0] = "ì´ë¦„";
+  titleTemp[1] = "ì„±ë³„";
+  titleTemp[2] = "ë‚˜ì´";
   int size = temp_list.size();
   String[][] dataStudentArray = new String[size][3];
 
@@ -286,7 +286,7 @@ class InputStud extends JFrame implements ActionListener {
  ButtonGroup group;
 
  public InputStud() {
-  super("ÇĞ»ı ÀÔ·Â");
+  super("í•™ìƒ ì…ë ¥");
   this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
   this.setBounds(200, 200, 250, 300);
   this.setLayout(new FlowLayout());
@@ -303,16 +303,16 @@ class InputStud extends JFrame implements ActionListener {
   panelCombo.setLayout(new FlowLayout());
   panelButton.setLayout(new FlowLayout());
 
-  name = new JLabel("ÀÌ¸§ : ");
-  age = new JLabel("³ªÀÌ : ");
-  professor = new JLabel("±³¼ö : ");
+  name = new JLabel("ì´ë¦„ : ");
+  age = new JLabel("ë‚˜ì´ : ");
+  professor = new JLabel("êµìˆ˜ : ");
   name_t = new JTextField(10);
   age_t = new JTextField(10);
   professor_combo = new JComboBox();
-  male = new JRadioButton("³²ÀÚ", false);
-  female = new JRadioButton("¿©ÀÚ", false);
-  btn1 = new JButton("È®ÀÎ");
-  btn2 = new JButton("Ãë¼Ò");
+  male = new JRadioButton("ë‚¨ì", false);
+  female = new JRadioButton("ì—¬ì", false);
+  btn1 = new JButton("í™•ì¸");
+  btn2 = new JButton("ì·¨ì†Œ");
   btn1.addActionListener(this);
   btn2.addActionListener(this);
   group = new ButtonGroup();
@@ -382,7 +382,7 @@ class InputPro extends JFrame implements ActionListener {
  ButtonGroup group;
 
  public InputPro() {
-  super("±³¼ö ÀÔ·Â");
+  super("êµìˆ˜ ì…ë ¥");
 
   this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
   this.setBounds(200, 200, 250, 300);
@@ -400,16 +400,16 @@ class InputPro extends JFrame implements ActionListener {
   panelCombo.setLayout(new FlowLayout());
   panelButton.setLayout(new FlowLayout());
 
-  name = new JLabel("ÀÌ¸§ : ");
-  age = new JLabel("³ªÀÌ : ");
-  subject_l = new JLabel("°ú¸ñ : ");
+  name = new JLabel("ì´ë¦„ : ");
+  age = new JLabel("ë‚˜ì´ : ");
+  subject_l = new JLabel("ê³¼ëª© : ");
   name_t = new JTextField(10);
   age_t = new JTextField(10);
   subject = new JComboBox();
-  male = new JRadioButton("³²ÀÚ", false);
-  female = new JRadioButton("¿©ÀÚ", false);
-  btn1 = new JButton("È®ÀÎ");
-  btn2 = new JButton("Ãë¼Ò");
+  male = new JRadioButton("ë‚¨ì", false);
+  female = new JRadioButton("ì—¬ì", false);
+  btn1 = new JButton("í™•ì¸");
+  btn2 = new JButton("ì·¨ì†Œ");
   btn1.addActionListener(this);
   btn2.addActionListener(this);
   group = new ButtonGroup();
