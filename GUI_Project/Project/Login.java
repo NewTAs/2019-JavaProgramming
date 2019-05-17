@@ -15,13 +15,15 @@ public class Login extends JFrame {
 		Toolkit Kit = Toolkit.getDefaultToolkit(); //Toolkit 객체 선언(기능 사용)
 		Dimension ScreenSize = Kit.getScreenSize(); //사용자 화면의 크기를 파악하는 함수
 		
-		setLocation((ScreenSize.width / 2) - (SWidth / 2), (ScreenSize.height / 2) - (SHeight / 2)); //Login 창을 화면의 정가운데에 띄움
+		setLocation((ScreenSize.width / 2) - (SWidth / 2) - 150, (ScreenSize.height / 2) - (SHeight / 2)); //Login 창을 화면의 정가운데에 띄움
 		
 		setSize(SWidth, SHeight); //Login창의 가로 픽셀과 세로 픽셀 크기 설정
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //X버튼을 눌렀을 때 Login창 종료
 		setTitle("한국성서대학교 관리 시스템 LOGIN"); //Login창의 Title 제목
 		
 		setLayout(null); //배치관리자 제거 (모든 배치는 좌표로 설정)
+		
+		Login_ButtonClick Login_ButtonClick = new Login_ButtonClick();
 		
 		JLabel Label_Login_1 = new JLabel("ID");
 		Label_Login_1.setSize(50, 30);
@@ -46,54 +48,59 @@ public class Login extends JFrame {
 		JButton Button_Login_1 = new JButton("Login");
 		Button_Login_1.setSize(90, 70);
 		Button_Login_1.setLocation(265, 300);
+		Button_Login_1.addActionListener(Login_ButtonClick);
 		add(Button_Login_1);
 		
 		JButton Button_Login_2 = new JButton("ID 찾기");
 		Button_Login_2.setSize(80, 25);
 		Button_Login_2.setLocation(70, 380);
+		Button_Login_2.addActionListener(Login_ButtonClick);
 		add(Button_Login_2);
 		
 		JButton Button_Login_3 = new JButton("PW 찾기");
 		Button_Login_3.setSize(90, 25);
 		Button_Login_3.setLocation(160, 380);
+		Button_Login_3.addActionListener(Login_ButtonClick);
 		add(Button_Login_3);
 		
 		JButton Button_Login_4 = new JButton("회원가입");
 		Button_Login_4.setSize(90, 25);
 		Button_Login_4.setLocation(265, 380);
+		Button_Login_4.addActionListener(Login_ButtonClick);
 		add(Button_Login_4);
 		
 		setVisible(true);
 		setResizable(false);
 		
 	}
-	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+			
 		Login KBU_Login = new Login();
 		
 		XSSFRow row;
 		XSSFCell cell;
 		
+		String Login_Array_1[][] = null;
+		
 		try {
-			FileInputStream Input = new FileInputStream("C:\\Users\\user\\Desktop\\수업 실습\\자바기반 응용프로그래밍\\TEAMPROJECT_XLSX\\Login.xlsx");
-			XSSFWorkbook Workbook = new XSSFWorkbook(Input);
+			FileInputStream InputFile = new FileInputStream("C:\\Users\\user\\Desktop\\수업 실습\\자바기반 응용프로그래밍\\TEAMPROJECT_XLSX\\Login.xlsx");
+			XSSFWorkbook Workbook = new XSSFWorkbook(InputFile);
 			
-			int SheetNum = Workbook.getNumberOfSheets(); //파일 내의 Sheet 개수
+			int SheetNums = Workbook.getNumberOfSheets(); //파일 내의 Sheet 개수
 			
-			for (int i = 0 ; i < SheetNum ; i++) {
-				XSSFSheet Sheet = Workbook.getSheetAt(i);
+			for(int SN = 0 ; SN < SheetNums ; SN++){
+				XSSFSheet Sheet = Workbook.getSheetAt(SN);
 				
-				int RowNums = Sheet.getPhysicalNumberOfRows(); //얻은 sheet에서의 row의 개수
-				int CellNums = Sheet.getRow(i).getPhysicalNumberOfCells(); //얻은 row에서의 cell의 개수
-				String Login_Array_1[][] = new String[RowNums][CellNums];
+				int Rows = Sheet.getPhysicalNumberOfRows();
+				int Cells = Sheet.getRow(SN).getPhysicalNumberOfCells() - 1;
+				Login_Array_1 = new String[Rows][Cells];
 				
-				for (int j = 0 ; j < RowNums ; j++) {
-					row = Sheet.getRow(j);
+				for (int r = 0 ; r < Rows ; r++) {
+					row = Sheet.getRow(r);
 					if (row != null) {
-						for (int k = 0 ; k < CellNums ; k++) {
-							Login_Array_1[j][k] = "" + row.getCell(k);
+						for (int c = 0 ; c < Cells ; c++) {
+							Login_Array_1[r][c] = "" + row.getCell(c);
 						}
 					}
 				}
@@ -101,7 +108,31 @@ public class Login extends JFrame {
 			
 		} catch (IOException e) {
 			e.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
+		
+		for (int i = 0 ; i < Login_Array_1.length ; i++) {
+			for (int j = 0 ; j < Login_Array_1[i].length ; j++)
+				System.out.println(i + "," + j + "," + Login_Array_1[i][j]);
+			System.out.println();
+		}
+		
 	}
+
+class Login_ButtonClick implements ActionListener {
+	public void actionPerformed(ActionEvent e) {
+		JButton Button_Clicker = (JButton)e.getSource();
+		
+		if (Button_Clicker.getText().equals("회원가입"))
+			System.out.println("회원가입 버튼");
+		if (Button_Clicker.getText().equals("ID 찾기"))
+			System.out.println("ID 찾기 버튼");
+		if (Button_Clicker.getText().equals("PW 찾기"))
+			System.out.println("PW 찾기 버튼");
+		if (Button_Clicker.getText().equals("Login"))
+			System.out.println("Login 완료");
+	}
+}
 
 }
