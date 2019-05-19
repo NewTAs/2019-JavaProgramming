@@ -12,7 +12,7 @@ class MakeID extends JFrame {
 	int SWidth = 400, SHeight = 450;
 
 	MakeID() {
-		MakeID_ButtonClick MakeID_ButtonClick = new MakeID_ButtonClick();
+		ButtonClick MakeID_ButtonClick = new ButtonClick();
 		
 		Toolkit Kit = Toolkit.getDefaultToolkit();
 		Dimension ScreenSize = Kit.getScreenSize();
@@ -78,7 +78,7 @@ class MakeID extends JFrame {
 		PasswordField_MakeID_2.setFont(font);
 		add(PasswordField_MakeID_2);
 
-		JButton Button_MakeID_2 = new JButton("<html>비밀번호<br> 재확인</html>");
+		JButton Button_MakeID_2 = new JButton("<html>비밀번호<br> 설정</html>");
 		Button_MakeID_2.setSize(85, 60);
 		Button_MakeID_2.setLocation(280, 95);
 		Button_MakeID_2.setFont(font);
@@ -220,22 +220,6 @@ class MakeID extends JFrame {
 
 		setVisible(true);
 		setResizable(false);
-	}
-	
-	class MakeID_ButtonClick implements ActionListener {
-		public void actionPerformed(ActionEvent e) {
-			JButton MakeID_Button_Clicker = (JButton) e.getSource();
-
-			if (MakeID_Button_Clicker.getText().equals("중복 확인")) {
-				System.out.println("중복 확인 버튼");
-			}
-			/*if (MakeID_Button_Clicker.getText().equals("ID 찾기"))
-				System.out.println("ID 찾기 버튼");
-			if (MakeID_Button_Clicker.getText().equals("PW 찾기"))
-				System.out.println("PW 찾기 버튼");
-			if (MakeID_Button_Clicker.getText().equals("Login"))
-				System.out.println("Login 완료");*/
-		}
 	}
 
 	public static void main(String[] args) {

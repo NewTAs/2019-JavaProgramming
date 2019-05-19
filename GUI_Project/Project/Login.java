@@ -27,7 +27,7 @@ public class Login extends JFrame {
 		
 		setLayout(null); // 배치관리자 제거 (모든 배치는 좌표로 설정)
 
-		Login_ButtonClick Login_ButtonClick = new Login_ButtonClick();
+		ButtonClick Login_ButtonClick = new ButtonClick();
 
 		JLabel Label_Login_1 = new JLabel("ID");
 		Label_Login_1.setSize(50, 30);
@@ -130,22 +130,6 @@ public class Login extends JFrame {
 			for (int j = 0; j < Login_Array_1[i].length; j++)
 				System.out.println(i + "," + j + "," + Login_Array_1[i][j]);
 			System.out.println();
-		}
-
-	}
-
-	class Login_ButtonClick implements ActionListener {
-		public void actionPerformed(ActionEvent e) {
-			JButton Login_Button_Clicker = (JButton) e.getSource();
-
-			if (Login_Button_Clicker.getText().equals("회원가입"))
-				new MakeID();
-			if (Login_Button_Clicker.getText().equals("ID 찾기"))
-				System.out.println("ID 찾기 버튼");
-			if (Login_Button_Clicker.getText().equals("PW 찾기"))
-				System.out.println("PW 찾기 버튼");
-			if (Login_Button_Clicker.getText().equals("Login"))
-				System.out.println("Login 완료");
 		}
 	}
 
